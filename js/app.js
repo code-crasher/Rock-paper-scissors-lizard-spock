@@ -1,9 +1,3 @@
-import {
-  startConfetti,
-  stopConfetti,
-  removeConfetti,
-} from "./modules/confetti.js";
-
 const gameControls = document.querySelectorAll(".btn__medium");
 const controls = document.querySelector(".game__controls");
 const gameBoard = document.querySelector(".game__board");
@@ -47,7 +41,6 @@ const decideWin = (userSelection, computerSelection) => {
   if (userSelection == "paper" && computerSelection == "rock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "paper" && computerSelection == "paper") {
     setDecision("It's a tie!");
@@ -55,12 +48,10 @@ const decideWin = (userSelection, computerSelection) => {
   if (userSelection == "rock" && computerSelection == "scissors") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "lizard" && computerSelection == "spock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "spock" && computerSelection == "lizard") {
     setDecision("YOU loose!");
@@ -69,16 +60,13 @@ const decideWin = (userSelection, computerSelection) => {
   if (userSelection == "lizard" && computerSelection == "paper") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "paper" && computerSelection == "lizard") {
     setDecision("YOU loose!");
-    setScore(SCORE - 1);
   }
   if (userSelection == "scissors" && computerSelection == "lizard") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "lizard" && computerSelection == "scissors") {
     setDecision("YOU loose!");
@@ -87,7 +75,6 @@ const decideWin = (userSelection, computerSelection) => {
   if (userSelection == "paper" && computerSelection == "spock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "spock" && computerSelection == "paper") {
     setDecision("YOU loose!");
@@ -96,22 +83,18 @@ const decideWin = (userSelection, computerSelection) => {
   if (userSelection == "spock" && computerSelection == "scissors") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "scissors" && computerSelection == "spock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "spock" && computerSelection == "rock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "rock" && computerSelection == "spock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "spock" && computerSelection == "spock") {
     setDecision("IT'S A TIE!");
@@ -129,7 +112,6 @@ const decideWin = (userSelection, computerSelection) => {
   if (userSelection == "rock" && computerSelection == "lizard") {
     setDecision("you win!");
     setScore(SCORE + 1);
-    startConfetti();
   }
   if (userSelection == "scissors" && computerSelection == "scissors") {
     setDecision("It's a tie!");
@@ -141,7 +123,6 @@ const decideWin = (userSelection, computerSelection) => {
   if (userSelection == "scissors" && computerSelection == "paper") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
-    startConfetti();
   }
 };
 
